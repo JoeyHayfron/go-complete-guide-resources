@@ -1,7 +1,30 @@
 package main
 
-func main() {
+import "fmt"
 
+type Product struct {
+  title string
+  id int
+  price float64
+}
+
+func main() {
+  hobbies := [3]string{"Coding", "Gaming", "Listening to music"}
+  fmt.Print(hobbies)
+  fmt.Print(hobbies[0])
+  fmt.Print(hobbies[1:])
+  firstSlice := hobbies[:2]
+  secondSlice := hobbies[0:2]
+
+  reSlice := secondSlice[1:3]
+
+  cGoals := []string{"Learn Go", "Understand Go fundamentals"}
+  cGoals[1] = "Become really good at Go"
+
+  cGoals = append(cGoals, "Do amazing things with Go")
+
+  prodList := []Product{{title: "First One", id: 1, price: 10.0}, {title: "Second One", id: 2, price: 10.0}}
+  prodList = append(prodList, {title: "Third One", id: 3, price: 10.0})
 }
 
 // Time to practice what you learned!
